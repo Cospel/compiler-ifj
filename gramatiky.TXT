@@ -1,0 +1,29 @@
+1. <program> -> function <o_function><m_function>$
+2. <o_function> -> f_id(<params>)<body>end function <o_function>
+3. <o_function> -> E
+4. <m_function> -> main(<params>)<body>end;
+5. <params> -> param <params_n>
+6. <params> -> E
+7. <params_n> -> ,param <params_n>
+8. <params_n> -> E
+9. <body> -> <var_declarations><stat_list>
+10. <var_declarations> -> local id <decl> <var_declarations>
+11. <var_declarations> -> E
+12. <decl> -> ;
+13. <decl> -> = <expr>;
+14. <stat_list> -> <state><stat_list>
+15. <stat_list> -> E
+16. <state> -> write(<expr><exprs>);
+17. <state> -> while <expr> do <stat_list> end;
+18. <state> -> repeat <stat_list> until <expr>;
+19. <state> -> if <expr> then <stat_list> else <stat_list> end;
+20. <state> -> return <expr>;
+21. <state> -> E
+22. <state> -> id = <assign>;
+23. <assign> -> <expr>
+24. <assign> -> f_id(<params>)
+25. <assign> -> read(<read>)
+26. <read> -> number
+27. <read> -> string
+28. <exprs> -> ,<expr><exprs>
+29. <exprs> -> E
